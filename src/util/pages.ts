@@ -5,18 +5,18 @@ export interface NavPage {
 
 export const navPages: Array<NavPage> = [
     {
-        path: "/projects",
+        path: "https://jhg.app/projects",
         title: "Projects"
     },
     {
-        path: "/music",
+        path: "https://jhg.app/music",
         title: "Music"
     }
 ];
 
 export const allPages: Array<NavPage> = [
     {
-        path: "/",
+        path: "https://jhg.app",
         title: "Home"
     }
 ].concat(navPages);

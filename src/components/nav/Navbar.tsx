@@ -47,7 +47,7 @@ export default function Navbar() {
                                 fontWeight: 700,
                                 textDecoration: "none"
                             }}
-                            to="/"
+                            to="https://jhg.app"
                         >
                             jhg.app
                         </Typography>
