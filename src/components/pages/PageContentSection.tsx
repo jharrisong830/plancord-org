@@ -44,11 +44,7 @@ export default function PageContentSection({
                     >
                         {title}
                     </Typography>
-                    {description && (
-                        <Typography>
-                            {description}
-                        </Typography>
-                    )}
+                    {description && <Typography>{description}</Typography>}
                 </Stack>
             </Grid>
             <Grid size={{ xs: 12, md: 8 }} sx={{ alignItems: "center" }}>

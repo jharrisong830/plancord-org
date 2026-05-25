@@ -2,6 +2,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 
+import PublicIcon from "@mui/icons-material/Public";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -40,6 +41,26 @@ export default function Connections() {
                     alignItems: "center"
                 }}
             >
+                <Grid
+                    size="auto"
+                    sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center"
+                    }}
+                >
+                    <Button
+                        href="https://jhg.app"
+                        target="_blank"
+                        rel="noreferrer"
+                        variant="contained"
+                        size="large"
+                        startIcon={<PublicIcon />}
+                    >
+                        jhg.app
+                    </Button>
+                </Grid>
+
                 <Grid
                     size="auto"
                     sx={{

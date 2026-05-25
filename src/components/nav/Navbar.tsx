@@ -47,9 +47,9 @@ export default function Navbar() {
                                 fontWeight: 700,
                                 textDecoration: "none"
                             }}
-                            to="https://jhg.app"
+                            to="/"
                         >
-                            jhg.app
+                            Plancord
                         </Typography>
                     </Grid>
 
