@@ -61,6 +61,15 @@ const theme = createTheme({
                     background: "#212529"
                 }
             }
+        },
+        MuiFilledInput: {
+            styleOverrides: {
+                root: {
+                    input: {
+                        color: "#DEE2E6"
+                    }
+                }
+            }
         }
     }
 });

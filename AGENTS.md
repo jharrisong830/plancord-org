@@ -19,8 +19,18 @@
   - Durable Objects for coordination where concurrent writes matter.
   - R2 only when object storage is needed.
 - Keep the first version metadata-only unless a feature truly needs file storage.
-- Use Firebase Auth for consumer-facing login unless a later decision replaces it.
-- Treat Cloudflare Access as an optional gate for private admin or staging surfaces, not as the primary long-term friend auth system.
+- Use Firebase Auth for the app's login and identity layer.
+- Treat Cloudflare Access as an optional gate for private admin or staging surfaces, not as the app's primary login system.
+
+## Auth Implementation Notes
+- Centralize Firebase auth state in a top-level provider.
+- Keep auth loading state explicit so protected routes do not redirect before Firebase resolves the session.
+- Use route-guard layouts for access control instead of scattering redirects across pages.
+- Preserve the requested destination when redirecting unauthenticated users to sign in.
+- Treat signup as account creation and login as session creation; do not reuse the same flow for both.
+- Keep user-facing auth errors visible in the UI instead of only logging them.
+- Do not trim passwords before submitting them to Firebase.
+- Unsubscribe Firebase observers during cleanup to avoid duplicate listeners and stale updates.
 
 ## Working Rules
 - Keep changes small and aligned with the current scope.

@@ -10,7 +10,7 @@ Shared calendar app for a small group of friends.
 
 ## Current status
 
-The repository currently contains a frontend-only React app. The longer-term plan is to add a Cloudflare-based backend for calendars, events, invitations, and availability matching.
+The repository currently contains a frontend-only React app. The longer-term plan is to add a Cloudflare-based backend for calendars, events, invitations, and availability matching, with Firebase Auth as the login system.
 
 ## Running the app
 
@@ -33,9 +33,9 @@ Other useful commands:
 - Cloudflare Workers for backend APIs
 - Cloudflare D1 for structured app data
 - Cloudflare Durable Objects for coordination where needed
-- Firebase Auth for consumer login
+- Firebase Auth for user authentication
 
 ## Notes
 
-- Cloudflare Access may still be useful for private admin or staging routes.
+- Cloudflare Access may still be useful for private admin or staging routes, but not for the main friend-facing login flow.
 - The app should stay invite-only at first, with private calendars and shared availability.
